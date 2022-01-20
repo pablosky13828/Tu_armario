@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172862459261",
+    "project_id": "tuarmario-d90c0",
+    "storage_bucket": "tuarmario-d90c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172862459261:android:594a8dbab4934d2b8e9014",
+        "android_client_info": {
+          "package_name": "com.example.tuarmario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172862459261-odq9ljg8pn03t0ie4tmfm6k6vcc9ot7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxyZ5qsUc4MHUku0Qmx4gOtYXDkErtsQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172862459261-odq9ljg8pn03t0ie4tmfm6k6vcc9ot7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
