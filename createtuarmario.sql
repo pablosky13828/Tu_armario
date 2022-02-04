@@ -2,20 +2,21 @@ USE tuarmario;
 
 CREATE TABLE if NOT EXISTS productos(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	carpeta VARCHAR (100) NOT NULL,
    nombre VARCHAR(100) NOT NULL,
    categoria VARCHAR(100) NOT NULL,
-   talla CHAR NOT NULL,
+   talla VARCHAR (4) NOT NULL,
    largo INT NOT NULL,
    ancho INT NOT NULL,
    mangas INT NOT NULL,
-   precio FLOAT NOT NULL,
-   imagen VARCHAR (200) NOT NULL
+   precio FLOAT (4,2) NOT NULL,
+   activo VARCHAR (1) NOT NULL
 )ENGINE=INNODB;
 
 CREATE TABLE if NOT EXISTS pedidos(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    productos_cesta VARCHAR(300) NOT NULL,
-   precio_total FLOAT NOT NULL,
+   precio_total FLOAT (4,2) NOT NULL,
    usuario VARCHAR (50) NOT NULL
 )ENGINE=INNODB;
 
