@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conexion con tomcat</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Parte cliente de aplicación web</h1>
+
+	<h2>FORMULARIO</h2>
+	<form>
+		<label for="name">Nombre:</label>
+		<input type="text" id="name" placeholder="nombre"/><br>
+		<label for="lastName">Apellidos:</label>
+		<input type="text" id="lastName" placeholder="apellidos"/><br>
+		<label for="dni">Dni:</label>
+		<input type="text" id="dni" placeholder="dni"/><br>
+		<label for="age">Edad:</label>
+		<input type="text" id="age" placeholder="edad"/><br>
+		<button onclick="sendData()">ENVIAR</button>
+	</form>
+<script>
+	$(document).ready(function() {
+    /*Request GET that is going to receive a JSON object from the server*/
+	    /*$.ajax({
+	        url: 'http://localhost:8080/WebDespliegue/ServletInicial/',
+	        type: 'GET',
+	        success: function(response) {
+	            console.log(response.name);
+	        },
+	        error: function(jqXHR, exception) {
+	            console.error("Error al conectar con el servidor");
+	        }
+	    });*/
+   	});
+
+
+   	/*Request POST that send data to server and receive a response*/
+	function sendData(){
+		var parameters = {};
+		parameters.name = $("#name").val();
+		parameters.lastName = $("#lastName").val();
+		parameters.dni = $("#dni").val();
+		parameters.age = $("#age").val();
+		var objetoJson = JSON.stringify(parameters);
+		console.log(objetoJson);
+    	$.ajax({
+	        url: 'http://localhost:8080/WebDespliegue/ServletInicial/',
+	        type: 'POST',
+	        data: (objetoJson),
+	        success: function(response) {
+	            console.log(response.name);
+	        },
+	        error: function(jqXHR, exception) {
+	            console.error("Error al conectar con el servidor");
+	        }
+    	});
+    }
+</script>
+</body>
+</html>
